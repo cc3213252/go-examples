@@ -25,3 +25,4 @@ pkg.go.dev
 
 系统的GOPROXY在Goland中会覆盖，所以每次创建新项目，都需要在Goland中设置一遍，如下：
 ![效果图](https://github.com/cc3213252/go-examples/raw/master/img/set-proxy.png)
+
