@@ -1,5 +1,5 @@
 
 ```bash
-wordCmd.Flags().StringVarP(&str, "str", "s", "", "请输入单词内容")
-	wordCmd.Flags().Int8VarP(&mode, "mode", "m", 0, "请输入单词转换的模式")
+cyd:003-tool-cobra cyd$ go run main.go word -s=blueegg -m=1
+2023/10/13 09:41:54 输出结果: BLUEEGG
 ```
