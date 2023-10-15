@@ -17,3 +17,7 @@ go mod init blueegg.com/gin
 ```bash
 go get -u github.com/spf13/cobra@v1.0.0
 ```
+
+## 问题
+
+如何断点运行
