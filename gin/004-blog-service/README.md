@@ -27,6 +27,17 @@ go get -u gopkg.in/natefinch/lumberjack.v2
 
 curl -v http://127.0.0.1:8000/api/v1/articles/1
 
+## swagger
+
+```bash
+go get -u github.com/swaggo/swag/cmd/swag@v1.6.5
+go get -u github.com/swaggo/gin-swagger@v1.2.0 
+go get -u github.com/swaggo/files
+go get -u github.com/alecthomas/template
+```
+
 ## 问题
 
-【fixed】model.go 中需引入 _ "github.com/go-sql-driver/mysql" ，否则会报 unknow driver mysql
+【fixed】model.go 中需引入 _ "github.com/go-sql-driver/mysql" ，否则会报 unknow driver mysql  
+
+【fixed】swag报错，not spec，需要在router.go中增加_ "blueegg/blog-service/docs"
