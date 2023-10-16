@@ -23,9 +23,21 @@ go get -u github.com/jinzhu/gorm@v1.9.12
 go get -u gopkg.in/natefinch/lumberjack.v2
 ```
 
+## 验证器
+
+```bash
+go get -u github.com/go-playground/validator/v10
+```
+
 ## 测试响应结果
 
 curl -v http://127.0.0.1:8000/api/v1/articles/1
+
+## 参数校验
+
+cyd:~ cyd$ curl -X GET http://127.0.0.1:8000/api/v1/tags\?state\=6
+{"code":10000001,"details":["State必须是[0 1]中的一个"],"msg":"入参错误"}cyd:~ cyd$ curl -X GET http://127.0.0.1:8000/api/v1/tags\?state\=1
+{}cyd:~ cyd$
 
 ## swagger
 
