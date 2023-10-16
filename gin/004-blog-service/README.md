@@ -23,6 +23,10 @@ go get -u github.com/jinzhu/gorm@v1.9.12
 go get -u gopkg.in/natefinch/lumberjack.v2
 ```
 
+## 测试响应结果
+
+curl -v http://127.0.0.1:8000/api/v1/articles/1
+
 ## 问题
 
 【fixed】model.go 中需引入 _ "github.com/go-sql-driver/mysql" ，否则会报 unknow driver mysql
