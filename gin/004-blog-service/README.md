@@ -53,3 +53,6 @@ go get -u github.com/alecthomas/template
 【fixed】model.go 中需引入 _ "github.com/go-sql-driver/mysql" ，否则会报 unknow driver mysql  
 
 【fixed】swag报错，not spec，需要在router.go中增加_ "blueegg/blog-service/docs"
+
+通过swagger提交POST请求报校验错误，实际postman调是好的
+

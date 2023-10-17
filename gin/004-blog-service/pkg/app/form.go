@@ -48,7 +48,6 @@ func BindAndValid(c *gin.Context, v interface{}) (bool, ValidErrors) {
 				Message: value,
 			})
 		}
-
 		return false, errs
 	}
 
