@@ -48,11 +48,18 @@ go get -u github.com/swaggo/files
 go get -u github.com/alecthomas/template
 ```
 
+## 框架不足
+
+错误是返回不是抛异常方式，后果就是未能捕获的异常就不知道是啥问题后台一律显示失败
+
 ## 问题
 
 【fixed】model.go 中需引入 _ "github.com/go-sql-driver/mysql" ，否则会报 unknow driver mysql  
 
 【fixed】swag报错，not spec，需要在router.go中增加_ "blueegg/blog-service/docs"
 
-通过swagger提交POST请求报校验错误，实际postman调是好的
+【fixed】通过swagger提交POST请求报校验错误，实际postman调是好的，swagger参数类型不对导致
 
+【fixed】更新tag老失败，最后发现是名字有约束，最少3个字符，而框架没有抛异常原因出来
+
+更新tag时，ModifiedBy必须这样写，否则出错，不知为啥

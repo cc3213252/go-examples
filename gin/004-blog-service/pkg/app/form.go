@@ -1,6 +1,7 @@
 package app
 
 import (
+	"fmt"
 	"github.com/gin-gonic/gin"
 	ut "github.com/go-playground/universal-translator"
 	val "github.com/go-playground/validator/v10"
@@ -48,6 +49,7 @@ func BindAndValid(c *gin.Context, v interface{}) (bool, ValidErrors) {
 				Message: value,
 			})
 		}
+		fmt.Println("异常原因：", errs)
 		return false, errs
 	}
 
