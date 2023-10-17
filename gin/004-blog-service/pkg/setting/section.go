@@ -1,7 +1,9 @@
-/**
+/*
+*
 @author: yudan.chen
 @date: 2023/10/15
-**/
+*
+*/
 package setting
 
 import "time"
@@ -14,11 +16,15 @@ type ServerSettingS struct {
 }
 
 type AppSettingS struct {
-	DefaultPageSize int
-	MaxPageSize     int
-	LogSavePath     string
-	LogFileName     string
-	LogFileExt      string
+	DefaultPageSize      int
+	MaxPageSize          int
+	LogSavePath          string
+	LogFileName          string
+	LogFileExt           string
+	UploadSavePath       string
+	UploadServerUrl      string
+	UploadImageMaxSize   int
+	UploadImageAllowExts []string
 }
 
 type DatabaseSettingS struct {

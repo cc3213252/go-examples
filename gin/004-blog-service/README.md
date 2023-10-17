@@ -63,3 +63,5 @@ go get -u github.com/alecthomas/template
 【fixed】更新tag老失败，最后发现是名字有约束，最少3个字符，而框架没有抛异常原因出来
 
 更新tag时，ModifiedBy必须这样写，否则出错，不知为啥
+
+上传文件目前支持jpg，还支持哪些格式
