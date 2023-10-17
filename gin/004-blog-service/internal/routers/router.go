@@ -2,11 +2,13 @@ package routers
 
 import (
 	_ "blueegg/blog-service/docs"
+	"blueegg/blog-service/global"
 	"blueegg/blog-service/internal/middleware"
 	v1 "blueegg/blog-service/internal/routers/api/v1"
 	"github.com/gin-gonic/gin"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
+	"net/http"
 )
 
 func NewRouter() *gin.Engine {
@@ -20,6 +22,7 @@ func NewRouter() *gin.Engine {
 	tag := v1.NewTag()
 	upload := v1.NewUpload()
 	r.POST("/upload/file", upload.UploadFile)
+	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
 	apiv1 := r.Group("/api/v1")
 	{
 		apiv1.POST("/tags", tag.Create)

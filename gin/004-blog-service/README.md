@@ -52,6 +52,13 @@ go get -u github.com/alecthomas/template
 
 错误是返回不是抛异常方式，后果就是未能捕获的异常就不知道是啥问题后台一律显示失败
 
+## 文件上传
+
+在postman中设置，body选form-data，key选file，再加一个type参数
+{
+"file_access_url": "http://127.0.0.1:8000/static/4d70af5c3afd03282591c3118bfd8cfa.jpg"
+}
+
 ## 问题
 
 【fixed】model.go 中需引入 _ "github.com/go-sql-driver/mysql" ，否则会报 unknow driver mysql  
