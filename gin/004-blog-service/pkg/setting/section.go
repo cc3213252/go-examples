@@ -54,3 +54,13 @@ type JWTSettingS struct {
 	Issuer string
 	Expire time.Duration
 }
+
+type EmailSettingS struct {
+	Host     string
+	Port     int
+	UserName string
+	Password string
+	IsSSL    bool
+	From     string
+	To       []string
+}

@@ -50,7 +50,16 @@ go get -u github.com/alecthomas/template
 
 ## jwt
 
-go get -u github.com/dgrijalva/jwt-go@v3.2.0
+go get -u github.com/dgrijalva/jwt-go@v3.2.0  
+postman中传参时，body中要选form-data
+
+## 邮件报警
+
+go get -u gopkg.in/gomail.v2
+
+## 限流控制
+
+go get -u github.com/juju/ratelimit@v1.0.1
 
 ## 框架不足
 
