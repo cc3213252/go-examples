@@ -48,6 +48,10 @@ go get -u github.com/swaggo/files
 go get -u github.com/alecthomas/template
 ```
 
+## jwt
+
+go get -u github.com/dgrijalva/jwt-go@v3.2.0
+
 ## 框架不足
 
 错误是返回不是抛异常方式，后果就是未能捕获的异常就不知道是啥问题后台一律显示失败
