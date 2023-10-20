@@ -1,3 +1,4 @@
 .idea/
 test
 gin/004-blog-service/storage/
+gorm/test.db
