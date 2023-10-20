@@ -19,12 +19,21 @@ func main() {
 	dsn := "root:@tcp(127.0.0.1:3306)/gorm_test?charset=utf8mb4&parseTime=True&loc=Local"
 	db, _ := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
-	db.AutoMigrate(&User{})
-	user := User{Name: "Jinzhu", Age: 18, Birthday: time.Now()}
+	// step 1
+	//db.AutoMigrate(&User{})
+	//user := User{Name: "Jinzhu", Age: 18, Birthday: time.Now()}
+	//
+	//result := db.Create(&user) // 通过数据的指针来创建
+	//
+	//fmt.Println(user.ID)                     // 返回插入数据的主键
+	//fmt.Println(result.Error)                // 返回 error
+	//fmt.Println("num:", result.RowsAffected) // 返回插入记录的条数
 
-	result := db.Create(&user) // 通过数据的指针来创建
-
-	fmt.Println(user.ID)                     // 返回插入数据的主键
-	fmt.Println(result.Error)                // 返回 error
-	fmt.Println("num:", result.RowsAffected) // 返回插入记录的条数
+	// step 2
+	users := []User{
+		{Name: "Jinzhu", Age: 18, Birthday: time.Now()},
+		{Name: "Jackson", Age: 19, Birthday: time.Now()},
+	}
+	result := db.Create(users)
+	fmt.Println("insert num:", result.RowsAffected)
 }
